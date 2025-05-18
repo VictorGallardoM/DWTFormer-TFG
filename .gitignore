@@ -1,0 +1,16 @@
+# Entorno virtual
+venv/
+__pycache__/
+*.pyc
+
+# Datos
+data/
+*.npz
+*.pt
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Archivos de configuración locales
+*.env
+
