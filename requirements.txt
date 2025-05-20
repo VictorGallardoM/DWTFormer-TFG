@@ -1,0 +1,30 @@
+# Deep Learning
+torch
+torchvision
+torchaudio
+
+# Wavelet Transform
+pywavelets
+
+# Procesamiento de imágenes
+opencv-python
+Pillow
+
+# Visualización
+matplotlib
+seaborn
+
+# Numérico y científico
+numpy
+scipy
+
+# Machine Learning
+scikit-learn
+
+# Jupyter notebooks
+notebook
+ipykernel
+
+# Utilidades varias
+tqdm
+medmnist
