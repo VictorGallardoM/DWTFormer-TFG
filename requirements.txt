@@ -31,3 +31,4 @@ medmnist
 torchsummary
 torchinfo
 PyWavelets
+pytest

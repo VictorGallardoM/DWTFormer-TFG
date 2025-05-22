@@ -1,41 +1,43 @@
-# 🧠 DWTFormer: Prevenció de Lesions amb Deep Learning en Imatges Mèdiques
+# 🧠 DWTFormer-TFG
 
-Aquest projecte forma part del meu **Treball de Fi de Grau** en Enginyeria Informàtica. L'objectiu és desenvolupar un model híbrid d'aprenentatge profund anomenat **DWTFormer**, que combina la **Transformada Wavelet Discreta (DWT)** amb una arquitectura **Transformer**, per detectar patrons en imatges mèdiques (del conjunt de dades MedMNIST) que puguin estar relacionats amb lesions esportives.
+**Desenvolupament d’un model d’aprenentatge profund basat en DWT i Transformers per a la prevenció de lesions esportives**
 
----
-
-## 📌 Descripció del Projecte
-
-En l’àmbit de la medicina esportiva, la prevenció de lesions és essencial. Aquest projecte proposa un enfocament automatitzat amb intel·ligència artificial per millorar la detecció precoç de factors de risc a partir d’imatges biomèdiques, utilitzant:
-
-- **DWT** per extreure característiques multiescala.
-- **Transformer** per capturar relacions espacials complexes.
-- **Dataset**: PathMNIST, part del conjunt MedMNIST, adaptat a un context de risc esportiu.
+Autor: Victor Gallardo Martínez  
+Tutor: Xavier Font Aragonés  
+Grau en Enginyeria Informàtica – Tecnocampus
 
 ---
 
-## 🧠 Model: DWTFormer
+## 📚 Descripció del projecte
 
-El model es compon de tres fases:
-
-1. **Preprocessament amb DWT**  
-   Aplicació de la transformada wavelet a la imatge d’entrada per obtenir subbandes de freqüència (LL, LH, HL, HH).
-
-2. **Divisió en patches i embeddings**  
-   Les subbandes es divideixen en blocs vectoritzats i es codifiquen com a embeddings.
-
-3. **Transformer Encoder**  
-   Processament dels embeddings amb capes `nn.TransformerEncoder` que modelen dependències espacials i semàntiques.
+Aquest projecte implementa un model anomenat **DWTFormer**, que combina la **Transformada Wavelet Discreta (DWT)** amb una arquitectura **Transformer** per a la classificació d’imatges mèdiques. L’objectiu principal és validar la viabilitat d’aquest enfocament en la detecció de patrons associats a **lesions esportives**, utilitzant imatges del dataset **PathMNIST** com a cas base.
 
 ---
 
-## 🧪 Resultats
+## 🗂️ Estructura del projecte
+DWTFormer-TFG/
+├── notebooks/ 
+├── src/ 
+│ ├── data/ # Càrrega i preprocés de dades
+│ ├── model/ # Arquitectura del model DWTFormer
+│ └── train/ # Entrenament i avaluació
+├── model/ # Models entrenats (.pt)
+├── annexos/metrics/ # Gràfics i resultats per a la memòria
+├── tests/ # Tests automatitzats amb pytest
+├── main.py # Script principal d'entrenament i test
+├── requirements.txt # Dependències del projecte
+└── README.md # Aquest fitxer
 
-- Entrenament i validació amb mètriques com **accuracy**, **matriu de confusió** i corbes d'aprenentatge.
-- Comparació amb models base com una **CNN** o un **Vision Transformer (ViT)** pur.
-- Avaluació final sobre el conjunt de test: precisió global i anàlisi d'errors.
+## 🚀 Com executar el projecte
 
----
+1. **Instal·la les dependències**
+   pip install -r requirements.txt
 
-## 📁 Estructura del Repositori
+2. **Entrena el model**
+   python main.py
+3. **Executa els tests**
+   pytest tests/
 
+4. **Revisa les mètriques**
+   annexos/metrics/confusion_matrix.png
+   /metrics/roc_curve_multiclass.png
